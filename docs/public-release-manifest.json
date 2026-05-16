@@ -1,0 +1,27 @@
+{
+  "include": [
+    ".gitignore",
+    ".github/",
+    "pyproject.toml",
+    "README.md",
+    "LICENSE",
+    "THIRD_PARTY_NOTICES.md",
+    "docs/",
+    "examples/",
+    "src/",
+    "tests/"
+  ],
+  "exclude": [
+    "private source folders",
+    "local task memory files",
+    "generated run directories except reviewed README assets",
+    "third-party model, document, media, archive, and runtime-cache inputs",
+    "private inspection helpers"
+  ],
+  "allowed_generated_assets": [
+    "docs/assets/*.gif",
+    "docs/assets/*.png"
+  ],
+  "public_release_command": "conda run -n dl python -m pvmppt_lab.cli export-public --output runs/public-release/pvmppt-lab --init-git",
+  "audit_command": "conda run -n dl python -m pvmppt_lab.cli release-check"
+}

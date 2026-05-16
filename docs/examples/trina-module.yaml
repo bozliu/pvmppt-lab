@@ -1,0 +1,23 @@
+module:
+  name: Trina Solar TSM-250PA05.08
+  cells_in_series: 60
+  pmp_ref_w: 249.86
+  voc_ref_v: 37.6
+  isc_ref_a: 8.55
+  vmp_ref_v: 31.0
+  imp_ref_a: 8.06
+  alpha_isc_a_per_c: 0.00513
+  beta_voc_v_per_c: -0.1316
+  light_current_ref_a: 8.5795
+  saturation_current_ref_a: 2.0381e-10
+  series_resistance_ohm: 0.247
+  shunt_resistance_ohm: 301.8149
+  ideality_factor: 0.99766
+  band_gap_ev: 1.121
+array:
+  series_modules: 10
+  parallel_strings: 4
+sweeps:
+  irradiances_w_m2: [400, 650, 800, 1000]
+  temperatures_c: [0, 25, 50, 75]
+  points: 240

@@ -1,0 +1,38 @@
+[build-system]
+requires = ["setuptools>=68", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "pvmppt-lab"
+version = "0.1.0"
+description = "Python-only PV module, converter, and MPPT experiment automation."
+readme = "README.md"
+requires-python = ">=3.10"
+license = {text = "MIT"}
+authors = [
+  {name = "pvmppt-lab contributors"}
+]
+dependencies = [
+  "numpy",
+  "scipy",
+  "pandas",
+  "matplotlib",
+  "pillow",
+  "pyyaml",
+  "mpl-animator>=0.1.11,<0.2"
+]
+
+[project.optional-dependencies]
+standard = ["pvlib"]
+dev = ["pytest"]
+
+[project.scripts]
+pvmppt-lab = "pvmppt_lab.cli:main"
+
+[tool.setuptools.packages.find]
+where = ["src"]
+
+[tool.pytest.ini_options]
+pythonpath = ["src"]
+testpaths = ["tests"]
+addopts = "-q"
